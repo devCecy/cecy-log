@@ -26,8 +26,8 @@ const Wrapper = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	@media screen and (max-width: 800px) {
-		padding: 0 24px;
+	@media screen and (max-width: 1280px) {
+		padding: 0 20px;
 	}
 `;
 
