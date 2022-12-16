@@ -36,9 +36,11 @@ const Wrapper = styled.footer`
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		font-size: 12px;
 
 		&:hover {
-			color: #e5ba73;
+			color: ${({ theme }) => theme.colors.main};
+			transition: 0.1s ease-in-out;
 		}
 	}
 `;

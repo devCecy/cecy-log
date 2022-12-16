@@ -52,7 +52,7 @@ const PostList = styled(Link)`
 		border-radius: 10px;
 	}
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 480px) {
 		padding: 0;
 	}
 `;
