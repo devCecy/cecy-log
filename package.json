@@ -5,10 +5,10 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"postbuild": "next-sitemap",
 		"start": "next start",
 		"lint": "next lint",
-		"vercel-deploy": "next build && next export"
+		"vercel-deploy": "next build && next export",
+		"postbuild": "next-sitemap --config next-sitemap.config.js"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.5",
