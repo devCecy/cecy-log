@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-	siteUrl: "https://devcecy.com",
+	siteUrl: "https://devcecy.me",
 	changefreq: "daily",
 	generateRobotsTxt: true,
 	robotsTxtOptions: {
