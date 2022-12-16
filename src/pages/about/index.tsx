@@ -20,7 +20,7 @@ const About = () => {
 				여기고 있습니다.
 			</Description>
 			<Description>
-				맥주, 아이스아메리카노, 셜록홈즈, 해리포터를 좋아합니다. <br />
+				맥주, 아이스 아메리카노, 셜록홈즈, 해리포터를 좋아합니다. <br />
 			</Description>
 		</Wrapper>
 	);
@@ -36,6 +36,7 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
 	font-size: 16px;
+	font-weight: 600;
 `;
 
 const Description = styled.p``;
