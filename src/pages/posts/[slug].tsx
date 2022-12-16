@@ -1,3 +1,4 @@
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
@@ -15,14 +16,13 @@ type Props = {
 };
 
 export default function Post({ post, morePosts, preview }: Props) {
-	console.log("post", post);
-
 	const router = useRouter();
 	if (!router.isFallback && !post?.slug) {
 		return <ErrorPage statusCode={404} />;
 	}
 	return (
 		<>
+			<NextSeo title={post.title} description={post.description} />
 			{router.isFallback ? (
 				<title>Loading…</title>
 			) : (
