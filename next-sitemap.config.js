@@ -5,6 +5,7 @@ module.exports = {
 	changefreq: "daily",
 	generateIndexSitemap: true,
 	generateRobotsTxt: true,
+	sitemapSize: 7000,
 	robotsTxtOptions: {
 		policies: [
 			{
