@@ -14,14 +14,8 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"incremental": true,
-		"baseUrl": "."
+		"baseUrl": "src"
 	},
-	"include": [
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		"_posts/**/**.md",
-		"next-sitemap.config.js"
-	],
+	"include": ["src", "styles", "next-env.d.ts"],
 	"exclude": ["node_modules"]
 }

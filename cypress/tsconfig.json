@@ -1,0 +1,10 @@
+{
+	"extends": "../tsconfig.json",
+	"include": ["./**/*.ts"],
+	"exclude": [],
+	"compilerOptions": {
+		"types": ["cypress"], // jest types와 충돌을 피하기 위함
+		"lib": ["es2015", "dom"],
+		"isolatedModules": false
+	}
+}
