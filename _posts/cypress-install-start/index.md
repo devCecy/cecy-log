@@ -70,7 +70,26 @@ npx cypress open
 
 ![cypress.config.ts 파일](/images/cypress/cypress-config-file.png)
 
-5.(옵션) 저는 package.json 파일에 Cypress의 오픈과 실행을 스크립트로 추가해서 사용하겠습니다.
+5.ts를 사용한다면 cypress폴더 내부에 tsconfig.json파일을 만들어줍시다.
+
+- `extends`로 프로젝트 루트에 있는 tsconfig.json설정을 가져와주고, 나머지는 cypress 폴더에 맞게 커스텀 해주면 됩니다.
+- 루트의 tsconfig.json에서는 각각의 파일을 모듈로 강제해주기 위해서 `isolatedModules` : true로 설정했지만, cypress에서는 그렇지 않을 것이기 떄문에 false로 해주겠습니다.
+
+```json
+// cypress > tsconfig.json
+{
+	"extends": "../tsconfig.json",
+	"include": ["./**/*.ts"],
+	"exclude": [],
+	"compilerOptions": {
+		"types": ["cypress"], // jest types와 충돌을 피하기 위함
+		"lib": ["es2015", "dom"],
+		"isolatedModules": false
+	}
+}
+```
+
+6.(옵션) 저는 package.json 파일에 Cypress의 오픈과 실행을 스크립트로 추가해서 사용하겠습니다.
 
 ```json
 "scripts": {
