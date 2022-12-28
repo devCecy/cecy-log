@@ -4,7 +4,7 @@ import Link from "next/link";
 const Header = () => {
 	return (
 		<Wrapper>
-			<NavItem href="/" props="home">
+			<NavItem href="/" props="home" className="nav-home-btn">
 				DEVCECY LOG
 			</NavItem>
 			<NavItem href="/about" props="menu">
@@ -30,6 +30,7 @@ const Wrapper = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
 	@media screen and (max-width: 480px) {
 		width: 100%;
 		padding: 0 20px;
