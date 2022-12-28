@@ -10,7 +10,8 @@
 		"vercel-deploy": "next build && next export",
 		"postbuild": "next-sitemap --config next-sitemap.config.js",
 		"cy:open": "cypress open",
-		"cy:run": "npx cypress run"
+		"cy:run": "npx cypress run",
+		"ts": "tsc"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.5",
