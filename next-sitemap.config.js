@@ -3,7 +3,7 @@
 module.exports = {
 	siteUrl: "https://devcecy.me",
 	changefreq: "daily",
-	generateIndexSitemap: true,
+	generateIndexSitemap: false,
 	generateRobotsTxt: true,
 	exclude: ["/server-sitemap.xml"],
 	// sitemapSize: 100000,
@@ -14,6 +14,6 @@ module.exports = {
 				allow: "/",
 			},
 		],
-		additionalSitemaps: ["https://example.com/server-sitemap.xml"],
+		additionalSitemaps: ["https://devcecy.me/server-sitemap.xml"],
 	},
 };
