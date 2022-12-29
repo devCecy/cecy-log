@@ -5,7 +5,8 @@ module.exports = {
 	changefreq: "daily",
 	generateIndexSitemap: true,
 	generateRobotsTxt: true,
-	sitemapSize: 7000,
+	exclude: ["/server-sitemap.xml"],
+	// sitemapSize: 100000,
 	robotsTxtOptions: {
 		policies: [
 			{
@@ -13,6 +14,6 @@ module.exports = {
 				allow: "/",
 			},
 		],
-		additionalSitemaps: ["https://devcecy.me/sitemap-0.xml"],
+		additionalSitemaps: ["https://example.com/server-sitemap.xml"],
 	},
 };
