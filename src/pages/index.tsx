@@ -19,7 +19,12 @@ const Home: NextPage = ({ allPosts }: any) => {
 			/>
 			{/* 포스트 리스트 */}
 			{allPosts.map((post: any, idx: string) => (
-				<PostList key={idx} onClick={() => router.push(`/posts/${post.slug}`)}>
+				<PostList
+					key={idx}
+					onClick={() => {
+						router.push(`/posts/${post.slug}`);
+					}}
+				>
 					<PostItem post={post} />
 				</PostList>
 			))}

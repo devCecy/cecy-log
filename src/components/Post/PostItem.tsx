@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
 import Link from "next/link";
+import { Router, useRouter } from "next/router";
 
 const PostItem = ({ post }: any) => {
 	const { title, description, date, tags } = post;
+	const router = useRouter();
 
 	return (
 		<Wrapper>
@@ -12,8 +14,14 @@ const PostItem = ({ post }: any) => {
 				<PublishedDate>{date}</PublishedDate>
 				<TagList>
 					{tags?.map((tag: any) => (
-						<Tag key={tag + `tag`}>
-							<Link href={`/tags/${tag}/`}>{`#${tag}`}</Link>
+						<Tag
+							key={tag + `tag`}
+							// onClick={(e) => {
+							// 	e.stopPropagation();
+							// 	router.push(`/tags/${tag}`);
+							// }}
+						>
+							{`#${tag}`}
 						</Tag>
 					))}
 				</TagList>
